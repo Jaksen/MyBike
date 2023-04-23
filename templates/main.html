@@ -124,6 +124,231 @@
 
 <body>
 
+	<div class="container">
+		<h2>My Bike</h2>
+		<p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
+	  </div>
+	  
+	  <div class="container">
+	  <div class="row">
+	  
+	  <div class="col">
+	  Frame:</br>
+	  <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+	  <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+	  </br>
+	  
+	  Wheels:</br>
+	  <button class="w3-button w3-display-left w3-black" onclick="plusDivs2(-1)">&#10094;</button>
+	  <button class="w3-button w3-display-right w3-black" onclick="plusDivs2(1)">&#10095;</button>
+	  </br>
+	  
+	  Suspension Fork:</br>
+	  <button class="w3-button w3-display-left w3-black" onclick="plusDivs3(-1)">&#10094;</button>
+	  <button class="w3-button w3-display-right w3-black" onclick="plusDivs3(1)">&#10095;</button>
+	  </br>
+	  
+	  Crank:</br>
+	  <button class="w3-button w3-display-left w3-black" onclick="plusDivs2(-1)">&#10094;</button>
+	  <button class="w3-button w3-display-right w3-black" onclick="plusDivs2(1)">&#10095;</button>
+	  </br>
+	  
+	  
+	  </div>
+	  
+	  <div class="col-6">
+	  
+	  <div class="container-fluid">
+	  
+	  <div class="overlap" style="position: absolute; top: 0; left: 0;z-index: 100;">
+	  
+	  <div class="w3-display-container mySlides3">
+		<img src="RSF2.png" style="width:100%">
+	  </div>
+	  
+	  <div class="w3-display-container mySlides3">
+		<img src="RSF.png" style="width:100%">
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="overlap" style="position: absolute; top: 0; left: 0;z-index: 100;">
+	  
+	  <div class="w3-display-container mySlides">
+		<img src="RB1.jpg" style="width:100%">
+	  </div>
+	  
+	  <div class="w3-display-container mySlides">
+		<img src="RB2.jpg" style="width:100%">
+	  </div>
+	  
+	  <div class="w3-display-container mySlides">
+		<img src="MTB2.png" style="width:100%">
+	  </div>
+	  
+	  <div class="w3-display-container mySlides">
+		<img src="MTBF1.png" style="width:100%">
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="overlap" style="position: absolute; top: 0; left: 0;z-index: 100;">
+	  
+	  <div class="w3-display-container mySlides2">
+		<img src="MTBW1.png" style="width:100%">
+	  </div>
+	  
+	  <div class="w3-display-container mySlides2">
+		<img src="MTBW3.png" style="width:100%">
+	  </div>
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="col">
+	  
+	  <div class="container">
+	  
+	  <div class="w3-display-container myInfo">
+		   Trolltunga, Norway
+	  </div>
+	  
+	  <div class="w3-display-container myInfo">
+		  Northern Lights, Norway
+	  </div>
+	  
+	  <div class="w3-display-container myInfo">
+		  Beautiful Mountains
+	  </div>
+	  
+	  <div class="w3-display-container myInfo">
+		  The Rain Forest
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="container">
+	  
+	  <div class="w3-display-container myInfo2">
+		  Beautiful Mountains
+	  </div>
+	  
+	  <div class="w3-display-container myInfo2">
+		  The Rain Forest
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="container">
+	  
+	  <div class="w3-display-container myInfo3">
+		  The Rain Forest
+	  </div>
+	  
+	  <div class="w3-display-container myInfo3">
+		  The Rain Forestxx
+	  </div>
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  <div class="row">
+	  
+	  <div class="col-md-4">
+	  
+	  hej
+	  
+	  </div>
+	  
+	  <div class="col-md-4">
+	  
+	  hej2
+	  
+	  </div>
+	  
+	  <div class="col-md-4">
+	  
+	  Hej3
+	  
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  </div>
+	  
+	  
+	  
+	  <script>
+	  var slideIndex = 1;
+	  var slideIndex2 = 1;
+	  var slideIndex3 = 1;
+	  showDivs(slideIndex);
+	  showDivs2(slideIndex2);
+	  showDivs3(slideIndex3);
+	  
+	  function plusDivs(n) {
+		showDivs(slideIndex += n);
+	  }
+	  
+	  function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var y = document.getElementsByClassName("myInfo");
+		if (n > x.length && n > y.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";
+		   y[i].style.display = "none"; 
+		}
+		x[slideIndex-1].style.display = "block";  
+		y[slideIndex-1].style.display = "block";  
+	  }
+	  
+	  function plusDivs2(n) {
+		showDivs2(slideIndex2 += n);
+	  }
+	  
+	  function showDivs2(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides2");
+		var y = document.getElementsByClassName("myInfo2");
+		if (n > x.length && n > y.length) {slideIndex2 = 1}    
+		if (n < 1) {slideIndex2 = x.length}
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";
+		   y[i].style.display = "none"; 
+		}
+		x[slideIndex2-1].style.display = "block";  
+		y[slideIndex2-1].style.display = "block"; 
+	  }
+	  
+	  function plusDivs3(n) {
+		showDivs3(slideIndex3 += n);
+	  }
+	  
+	  function showDivs3(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides3");
+		var y = document.getElementsByClassName("myInfo3");
+		if (n > x.length && n > y.length) {slideIndex3 = 1}    
+		if (n < 1) {slideIndex3 = x.length}
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";
+		   y[i].style.display = "none"; 
+		}
+		x[slideIndex3-1].style.display = "block";  
+		y[slideIndex3-1].style.display = "block"; 
+	  }
+	  
+	  </script>
+
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
